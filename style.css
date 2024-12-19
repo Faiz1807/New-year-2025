@@ -35,15 +35,15 @@ body {
 }
 
 #tree {
-    width: 90%; /* Ёлка адаптируется под экран */
-    max-height: 70vh; /* Ограничиваем высоту ёлки */
+    width: 100%; /* Ёлка занимает всю ширину */
+    max-height: 60vh; /* Ограничиваем высоту ёлки */
     object-fit: contain;
 }
 
 /* Инструкция рядом с ёлкой */
 #instruction {
     margin-top: 10px;
-    font-size: 1.5em;
+    font-size: 2em; /* Увеличен размер текста */
     color: #f0f8ff;
     text-shadow: 2px 2px 5px #000;
 }
@@ -54,19 +54,19 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 10px;
-    gap: 10px;
+    gap: 15px; /* Увеличено расстояние между подарками */
     width: 100%;
 }
 
 .present {
-    width: 60px;
-    height: 60px;
+    width: 80px; /* Увеличен размер подарков */
+    height: 80px; /* Увеличен размер подарков */
     background-color: #ff6f61;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
+    font-size: 3em; /* Увеличен размер иконки подарка */
     cursor: pointer;
     box-shadow: 2px 2px 5px #000;
 }
@@ -81,7 +81,7 @@ body {
 #message-box {
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    padding: 15px; /* Увеличен отступ внутри блока */
     border-radius: 10px;
     width: 90%;
     text-align: center;
@@ -90,8 +90,8 @@ body {
 }
 
 #message {
-    font-size: 1.2em;
-    line-height: 1.5;
+    font-size: 1.6em; /* Увеличен размер текста пожелания */
+    line-height: 1.8;
 }
 
 /* Видео-контейнер */
@@ -105,4 +105,21 @@ body {
     align-items: center;
     width: 90%;
     max-width: 600px;
+}
+
+/* Адаптивные стили для телефонов */
+@media (max-width: 600px) {
+    #instruction {
+        font-size: 1.8em; /* Чуть меньше текст на очень маленьких экранах */
+    }
+
+    .present {
+        width: 70px; /* Подарки чуть меньше на экранах до 600px */
+        height: 70px;
+        font-size: 2.5em;
+    }
+
+    #message {
+        font-size: 1.4em; /* Пожелания чуть меньше */
+    }
 }
